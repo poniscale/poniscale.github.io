@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)https://n-pejiaioeygqusury7j3qqiwlqyl7n3ttaojjwmq-0lu-script.googleusercontent.com/userCodeAppPanel -->
+ <!-- V1.2 260725 -->
+<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./jsapi"></script><script>window.parent.maeExportApis_();</script>
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="金來磅電子秤，專業計價秤、防蟑秤、工業電子秤，精準耐用，全台服務，歡迎來電 0930-133-697。">
+    <meta name="keywords" content="金來磅,電子秤,計價秤,防蟑秤,工業秤,磅秤,金來磅電子,PONI,PONISCALE,Scale">
+    <meta name="google-site-verification" content="7dgsvxTCiYGc6uAM5JIgikCAhuV2AijUYoJKLJIYMUQ" />
+    <title>金來磅電子有限公司| 金來磅電子秤-精準量測 · 信賴首選</title>
+    <link rel="icon" href="./favicon.png" sizes="any">
+    <link rel="icon" href="./favicon.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./favicon.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: #ecc94b;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #1a365d;
+            background-color: #ecc94b;
+        }
+
+        .marquee-container {
+            background-color: #ecc94b;
+            color: #1a365d;
+            padding: 10px 5%;
+            font-weight: bold;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+
+        .page-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .page-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+
+        .hero-banner {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background-color: #2d3748;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 54, 93, 0.45);
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
+        }
+
+        .hero-text h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #ecc94b;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .hero-text p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .counter-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .counter-section h3 {
+            font-size: 24px;
+            color: #1a365d;
+            margin-bottom: 25px;
+        }
+        .counter-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .counter-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+        }
+
+        .counter-box.views-box {
+            border-left: 2px dashed #ecc94b;
+        }
+        @media (max-width: 768px) {
+            .counter-box.views-box {
+                border-left: none;
+                border-top: 2px dashed #ecc94b;
+                padding-top: 20px;
+            }
+        }
+
+        .counter-number {
+            font-size: 44px;
+            font-weight: bold;
+            color: #2b6cb0;
+            margin-bottom: 10px;
+        }
+        .counter-number.views-num {
+            color: #dd6b20;
+        }
+        .counter-label {
+            font-size: 16px;
+            color: #718096;
+            line-height: 1.4;
+        }
+
+
+        .story-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 50px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .story-content h3 {
+            color: #2b6cb0;
+            font-size: 26px;
+            margin-bottom: 25px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .story-content p {
+            color: #4a5568;
+            line-height: 1.9;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* ========== 🆕 公司簡介圖片畫廊 - 新增樣式 ========== */
+        .story-gallery-divider {
+            margin: 40px 0 30px;
+            text-align: center;
+            position: relative;
+        }
+        .story-gallery-divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e0, transparent);
+        }
+        .story-gallery-title {
+            display: inline-block;
+            position: relative;
+            background: #ffffff;
+            padding: 0 24px;
+            color: #1a365d;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .story-gallery-title span {
+            color: #ecc94b;
+            margin-right: 4px;
+        }
+
+        .story-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #edf2f7;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 4 / 3;
+            /* 保持統一比例 */;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* 圖片上的放大鏡圖示提示 */
+        .gallery-item::after {
+            content: '🔍';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 18px;
+            background: rgba(26, 54, 93, 0.75);
+            color: #ffffff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .gallery-item:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* 圖片下方說明文字 */
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 14px;
+            background: linear-gradient(to top, rgba(26, 54, 93, 0.85), transparent);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* ========== 🆕 Lightbox 燈箱樣式 ========== */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.88);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+            animation: fadeIn 0.25s ease;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .lightbox-image {
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            cursor: default;
+            animation: zoomIn 0.3s ease;
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.85);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 38px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            z-index: 10000;
+            line-height: 1;
+            user-select: none;
+        }
+        .lightbox-close:hover {
+            color: #ecc94b;
+        }
+
+        .lightbox-caption {
+            color: #cbd5e0;
+            font-size: 15px;
+            margin-top: 16px;
+            text-align: center;
+            max-width: 80%;
+            cursor: default;
+        }
+
+        /* 響應式：圖片畫廊 */
+        @media (max-width: 920px) {
+            .story-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+        }
+        @media (max-width: 560px) {
+            .story-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .gallery-item {
+                aspect-ratio: 16 / 10;
+            }
+            .story-section {
+                padding: 30px 18px;
+            }
+        }
+
+
+        .product-intro-text {
+            text-align: center;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+        .category-btn {
+            background-color: transparent;
+            color: #4a5568;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .category-btn:hover {
+            color: #1a365d;
+        }
+        .category-btn.active {
+            color: #1a365d;
+            font-weight: bold;
+        }
+        .category-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -21px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #1a365d;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-img-wrapper {
+            width: 100%;
+            height: 240px;
+            background-color: #ffffff;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 1px solid #f0f4f8;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-img-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 2px;
+            letter-spacing: 1px;
+        }
+
+        .product-info {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .product-name {
+            font-size: 19px;
+            color: #1a365d;
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        .product-desc {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .product-action {
+            border-top: 1px solid #edf2f7;
+            padding-top: 15px;
+        }
+        .detail-btn {
+            background-color: #ffffff;
+            color: #1a365d;
+            border: 1px solid #1a365d;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .detail-btn:hover {
+            background-color: #1a365d;
+            color: #ffffff;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 40px;
+        }
+        .page-item {
+            background-color: #ffffff;
+            color: #4a5568;
+            border: 1px solid #cbd5e0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .page-item.active {
+            background-color: #1a365d;
+            color: #ffffff;
+            border-color: #1a365d;
+            font-weight: bold;
+        }
+        .page-item.disabled {
+            background-color: #edf2f7;
+            color: #a0aec0;
+            cursor: not-allowed;
+        }
+
+
+        .featured-post {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+        }
+        .featured-img {
+            flex: 1.2;
+            min-height: 300px;
+        }
+        .featured-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .featured-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .post-meta {
+            font-size: 13px;
+            color: #b7791f;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .featured-title {
+            font-size: 24px;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+        .featured-excerpt {
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+
+        .contact-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .contact-info-card {
+            background-color: #ffffff;
+            padding: 50px 40px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            border-top: 5px solid #1a365d;
+            text-align: center;
+        }
+        .contact-info-card h3 {
+            color: #1a365d;
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .info-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .info-text h4 {
+            font-size: 16px;
+            color: #718096;
+            margin-bottom: 8px;
+        }
+        .info-text p {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .phone-link {
+            color: #2b6cb0;
+            text-decoration: none;
+            background-color: #edf2f7;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .phone-link:hover {
+            background-color: #ecc94b;
+            color: #1a365d;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .page-header h2 {
+            font-size: 32px;
+            color: #1a365d;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: auto;
+            border-top: 3px solid #ecc94b;
+        }
+
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 920px) {
+            .featured-post {
+                flex-direction: column;
+            }
+            .featured-img {
+                width: 100%;
+                min-height: 250px;
+            }
+        }
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 5px;
+            }
+            .counter-grid {
+                flex-direction: column;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ========== 聯絡表單樣式 ========== */
+        .contact-form-section .contact-info-card {
+            text-align: left;
+            padding: 40px;
+        }
+        .contact-form-section h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a365d;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+            outline: none;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #1a365d;
+            box-shadow: 0 0 0 3px rgba(26,54,93,0.1);
+        }
+        .captcha-group {
+            background: #f7fafc;
+            padding: 15px 18px;
+            border-radius: 8px;
+        }
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .captcha-question {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a365d;
+            background: #edf2f7;
+            padding: 6px 18px;
+            border-radius: 6px;
+            letter-spacing: 2px;
+            user-select: none;
+        }
+        .captcha-equal {
+            font-size: 22px;
+            font-weight: 700;
+            color: #4a5568;
+        }
+        #captchaInput {
+            width: 120px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .captcha-refresh {
+            background: #ffffff;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            padding: 10px 14px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.2s;
+        }
+        .captcha-refresh:hover {
+            background: #ecc94b;
+            border-color: #ecc94b;
+        }
+        .captcha-hint {
+            margin-top: 6px;
+            font-size: 13px;
+            color: #e53e3e;
+            min-height: 18px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #1a365d;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #ecc94b;
+            color: #1a365d;
+        }
+        .form-message {
+            margin-top: 16px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            min-height: 20px;
+        }
+        .form-message.success {
+            color: #2f855a;
+        }
+        .form-message.error {
+            color: #e53e3e;
+        }
+        @media (max-width: 600px) {
+            .captcha-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #captchaInput {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>
+                <img src="images/logo.svg" alt="金來磅電子秤" style="height: 1.2em; vertical-align: middle; margin-right: 6px;">
+                金來磅電子秤
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a onclick="switchPage(&#39;index&#39;)" id="nav-index" class="active">首頁</a></li>
+                <li><a onclick="switchPage(&#39;story&#39;)" id="nav-story" class="">公司簡介</a></li>
+                <li><a onclick="switchPage(&#39;product&#39;)" id="nav-product" class="">商品頁面</a></li>
+                <li><a onclick="switchPage(&#39;about&#39;)" id="nav-about" class="">AI 生活風格誌</a></li>
+                <li><a onclick="switchPage(&#39;contact&#39;)" id="nav-contact" class="">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            🔥 【2026 專業頭家首選】金來磅新一代智能計價秤全面上線！ 📌 即日起凡致電預約親臨現場看秤，即享客製化免校正專業保固！ 📞 諮詢服務專線：0930-133-697
+        </div>
+    </div>
+
+    <main>
+        <div id="page-index" class="page-content active">
+            <div class="hero-banner">
+                <div class="carousel-slide" style="background-image: url(&#39;https://s319103.github.io/hong/images/319103.2.jpg&#39;);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-text">
+                        <h2>專注極致精準 守護商家商譽</h2>
+                        <p>我們深知一磅值千金的道理，不論是商業計價還是工業計數，金來磅提供全方位高穩定度的量測解決方案。</p>
+                    </div>
+                </div>
+                <div class="carousel-slide active" style="background-image: url(&#39;https://s319103.github.io/hong/images/319103.3.jpg&#39;);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-text">
+                        <h2>全台專人售後 一通電話服務到家</h2>
+                        <p>業界領先的售後維修保固，不讓工具問題耽誤您賺錢的腳步。歡迎致電諮詢：0930-133-697。</p>
+                    </div>
+                </div>
+            </div>
+            <section class="counter-section">
+                <h3>信賴與專業的品質承諾</h3>
+                <div class="counter-grid">
+                    <div class="counter-box"><div class="counter-number" id="count1">5,200+份</div><div class="counter-label">頭家認證物美價廉</div></div>
+                    <div class="counter-box"><div class="counter-number" id="count2">18,500+件</div><div class="counter-label">嚴選高CP值品質好</div></div>
+                    <div class="counter-box"><div class="counter-number" id="count3">99%信賴</div><div class="counter-label">誠信經營售後沒煩惱</div></div>
+                    <div class="counter-box views-box"><div class="counter-number views-num" id="count-views">0 次</div><div class="counter-label">👁️ 網頁總瀏覽次數</div></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== 公司簡介頁面（已添加圖片畫廊） ==================== -->
+        <div id="page-story" class="page-content">
+            <div class="page-header"><h2>關於金來磅</h2></div>
+            <section class="story-section">
+                <div class="story-content">
+                    <h3>一磅值千金，誠信傳百年</h3>
+                    <p>金來磅（PONI）成立於1995年，至今已達30餘年。專注於電子衡器、工業秤重系統及自動化控制設備的研發、設計與製造，致力於為客戶提供高精度、高效率的測量與秤重解決方案。憑藉深厚的技術實力與豐富的產業經驗，我們持續協助各產業提升生產效率、優化製程管理，並確保產品品質的穩定與一致。</p>
+                    <p>多年來，金來磅持續投入研發創新，累積多項核心技術與專利成果，在電子衡器及工業秤重領域保持技術優勢，產品品質與性能深受市場肯定。公司以精密秤重技術、數位控制系統及客製化整合能力為核心，提供涵蓋設備規劃、系統整合、安裝建置及售後服務的一站式解決方案，滿足不同產業的應用需求。</p>
+                    <p>為擴展全球市場並提供更完善的服務，金來磅於中國大陸設立子公司，建立完整的生產與服務體系，持續服務海內外客戶。我們秉持「品質、創新、專業、服務」的經營理念，不斷精進產品技術與製造能力，以多項專利技術、卓越的產品品質及完善的售後服務，致力成為工業秤重與自動化控制領域值得信賴的合作夥伴，並持續朝向國際市場穩健發展。</p>
+
+                    <!-- 🆕 圖片畫廊區域 - 公司實景展示 -->
+                    <div class="story-gallery-divider">
+                        <div class="story-gallery-title"><span>📷</span> 公司歷程</div>
+                    </div>
+                    <div class="story-gallery">
+                        <!-- 圖片 阿巴阿巴 -->
+                        <div class="gallery-item" onclick="openLightbox('images/5.png', '公司歷程')">
+                            <img src="images/5.png" alt="產品展示間">
+                            <span class="gallery-caption"></span>
+                        </div>
+
+                        <!-- 圖片 阿巴阿巴 -->
+                        <div class="gallery-item" onclick="openLightbox('images/1.png', '公司歷程')">
+                            <img src="images/1.png" alt="產品展示間">
+                            <span class="gallery-caption"></span>
+                        </div>
+
+                        <!-- 圖片 阿巴阿巴 -->
+                        <div class="gallery-item" onclick="openLightbox('images/2.png', '公司歷程')">
+                            <img src="images/2.png" alt="產品展示間">
+                            <span class="gallery-caption"></span>
+                        </div>
+
+                        <!-- 圖片 阿巴阿巴 -->
+                        <div class="gallery-item" onclick="openLightbox('images/3.png', '公司歷程')">
+                            <img src="images/3.png" alt="產品展示間">
+                            <span class="gallery-caption"></span>
+                        </div>
+
+                        <!-- 圖片 阿巴阿巴 -->
+                        <div class="gallery-item" onclick="openLightbox('images/4.png', '公司歷程')">
+                            <img src="images/4.png" alt="產品展示間">
+                            <span class="gallery-caption"></span>
+                        </div>
+
+                    </div>
+                    <!-- 🔺 圖片畫廊區域結束 -->
+                </div>
+            </section>
+        </div>
+
+        <div id="page-product" class="page-content">
+            <div class="page-header"><h2>計價電子秤與工業電子秤</h2></div>
+            <p class="product-intro-text">金來磅為全台商家與工廠提供卓越、精準、高耐用度的量測設備，滿足您從計價桌秤到高精密計數的所有專業需求。</p>
+
+            <div class="category-container" id="categoryContainer">
+                <button class="category-btn active" data-category="全部" onclick="changeCategory('全部')">全部產品</button>
+                <button class="category-btn" data-category="計價" onclick="changeCategory('計價')">計價秤系列</button>
+                <button class="category-btn" data-category="工業台秤" onclick="changeCategory('工業台秤')">工業台秤系列</button>
+                <button class="category-btn" data-category="工業桌秤" onclick="changeCategory('工業桌秤')">工業桌秤系列</button>
+                <!-- 若要新增一個「工業用」分類，就加一顆按鈕，並在 allProducts 中設定對應的「分類」值 -->
+            </div>
+
+            <div class="product-grid" id="productGrid"><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/VMP.gif" alt="VMP-30K">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">VMP-30K</h3>
+                        <p class="product-desc">超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [VMP-30K] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/V5.gif" alt="V5-30K">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">V5-30K</h3>
+                        <p class="product-desc">傳統大尺寸盤面款計價秤，大秤盤容納性高，穩定耐用，各行各業頭家愛用經典。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [V5-30K] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/EMP.gif" alt="EMP-30K">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">EMP-30K</h3>
+                        <p class="product-desc">新款智能充電菜市場計價秤，專為高流動攤商設計。強效續航力與防潑水構造，擺攤生財必備。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [EMP-30K] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/EPT.gif" alt="EPT-30K">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">EPT-30K</h3>
+                        <p class="product-desc">輕薄防蟑款，極簡不佔空間。獨特內部防護結構，能有效阻止昆蟲入侵主機板。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [EPT-30K] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/VPT.png" alt="VPT-3015K">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">VPT-3015K</h3>
+                        <p class="product-desc">經典防蟑合格款，通過國家檢驗標準。防蟑結構全面升級，兼具高精準度與耐操特性。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [VPT-3015K] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+
+                </div><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/LMPS.gif" alt="LMPS-30K">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">LMPS-30K</h3>
+                        <p class="product-desc">基礎計價桌秤，功能齊全、操作簡單。高超CP值首選，滿足日常商業計重所有基本需求。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [LMPS-30K] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+
+                </div><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/40X50.gif" alt="40*50#304白鐵工業台秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">40*50#304白鐵工業台秤</h3>
+                        <p class="product-desc">經典防蟑合格款，通過國家檢驗標準。防蟑結構全面升級，兼具高精準度與耐操特性。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [40*50#304白鐵工業台秤] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+
+                </div><div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/4252.gif" alt="42*52黑鐵工業台秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">42*52黑鐵工業台秤</h3>
+                        <p class="product-desc">經典防蟑合格款，通過國家檢驗標準。防蟑結構全面升級，兼具高精準度與耐操特性。</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert(&#39;商品 [42*52黑鐵工業台秤] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div></div>
+            <div class="pagination-container" id="paginationContainer" style="display: none;"></div>
+        </div>
+
+        <div id="page-about" class="page-content">
+            <div class="page-header"><h2>AI 生活風格誌</h2></div>
+            <section class="featured-post">
+                <div class="featured-img"><img src="./photo-1556742049-0cfed4f6a45d"></div>
+                <div class="featured-content">
+                    <div class="post-meta">💡 商業經營 · 智慧升級</div>
+                    <h3 class="featured-title">如何挑選一台會「幫你賺錢」的生鮮計價秤？</h3>
+                    <p class="featured-excerpt">新款智能充電菜市場秤如何幫您大幅縮短結帳時間，精確掌控利潤，防蟑防潑水設計更是延長生財工具壽命的關鍵！</p>
+                    <div><a class="read-more-btn" onclick="alert(&#39;精彩全文即將上線！&#39;)">閱讀全文</a></div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-contact" class="page-content">
+            <div class="page-header"><h2>聯絡資訊</h2></div>
+            <div class="contact-wrapper">
+                <!-- 原有的電話卡片 -->
+                <section class="contact-info-card">
+                    <h3>商品規格與報價 歡迎電話洽詢</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div class="info-text">
+                            <h4>專人服務熱線</h4>
+                            <p><a href="tel:0930133697" class="phone-link">0930-133-697</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 新增的 Email 聯絡表單 -->
+                <section class="contact-form-section" style="margin-top: 30px;">
+                    <div class="contact-info-card" style="border-top: 5px solid #ecc94b;">
+                        <h3>📧 線上留言詢問</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="senderName">您的姓名</label>
+                                <input type="text" id="senderName" name="name" placeholder="請輸入姓名（選填）">
+                            </div>
+                            <div class="form-group">
+                                <label for="senderEmail">電子郵件 <span style="color:#e53e3e;">*</span></label>
+                                <input type="email" id="senderEmail" name="email" required placeholder="請輸入您的 Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">詢問內容</label>
+                                <textarea id="message" name="message" rows="4" placeholder="請描述您的需求或問題（選填）"></textarea>
+                            </div>
+                            
+                            <!-- 驗證碼區域 -->
+                            <div class="form-group captcha-group">
+                                <label>驗證碼 <span style="color:#e53e3e;">*</span></label>
+                                <div class="captcha-box">
+                                    <span id="captchaQuestion" class="captcha-question"></span>
+                                    <span class="captcha-equal">=</span>
+                                    <input type="number" id="captchaInput" placeholder="請輸入答案" required>
+                                    <button type="button" id="refreshCaptcha" class="captcha-refresh" title="換一題">🔄</button>
+                                </div>
+                                <div class="captcha-hint" id="captchaHint"></div>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="submit-btn">
+                                ✉️ 送出訊息
+                            </button>
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- 🆕 Lightbox 燈箱（點擊圖片放大） -->
+    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="" onclick="event.stopPropagation()">
+        <div class="lightbox-caption" id="lightboxCaption" onclick="event.stopPropagation()"></div>
+    </div>
+
+    <footer>
+        <p><strong>金來磅電子有限公司</strong></p>
+        <p>新北市三重區中正北路530巷3號2樓</p>
+        <p>📞 0930-133-697</p>
+        <p>✉️ poniscale@126.com | poniscale@yahoo.com.tw</p>
+        <br>
+        <p>© 2026 金來磅電子秤 版權所有 | 精準量測 · 信賴首選</p>
+    </footer>
+
+    <script>
+
+        function switchPage(pageId) {
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(p => p.classList.remove('active'));
+
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) targetPage.classList.add('active');
+
+            const targetNav = document.getElementById('nav-' + pageId);
+            if (targetNav) targetNav.classList.add('active');
+
+            window.scrollTo({ top: 0 });
+        }
+
+
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            if (slides.length > 0) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+        }, 5000);
+
+
+        function animateCounter(id, target, suffix = "") {
+            if (target === 0) {
+                document.getElementById(id).innerText = "0" + suffix;
+                return;
+            }
+            let current = 0;
+            let step = Math.ceil(target / 50);
+            let timer = setInterval(() => {
+                const el = document.getElementById(id);
+                if (!el) { clearInterval(timer); return; }
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                el.innerText = current.toLocaleString() + suffix;
+            }, 30);
+        }
+
+        const allProducts = [
+            { "商品名稱": "VMP-30K", "商品介紹": "超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。", "商品圖片": "images/VMP.gif", "分類": "計價"  },
+            { "商品名稱": "V5-30K",  "商品介紹": "傳統大尺寸盤面款計價秤，大秤盤容納性高，穩定耐用，各行各業頭家愛用經典。", "商品圖片": "images/V5.gif", "分類": "計價"  },
+            { "商品名稱": "EMP-30K", "商品介紹": "新款智能充電菜市場計價秤，專為高流動攤商設計。強效續航力與防潑水構造，擺攤生財必備。", "商品圖片": "images/EMP.gif", "分類": "計價"   },
+            { "商品名稱": "EPT-30K", "商品介紹": "輕薄防蟑款，極簡不佔空間。獨特內部防護結構，能有效阻止昆蟲入侵主機板。", "商品圖片": "images/EPT.gif", "分類": "計價"   },
+            { "商品名稱": "VPT-3015K","商品介紹": "經典防蟑合格款，通過國家檢驗標準。防蟑結構全面升級，兼具高精準度與耐操特性。", "商品圖片": "images/VPT.png", "分類": "計價"   },
+            { "商品名稱": "LMPS-30K","商品介紹": "基礎計價桌秤，功能齊全、操作簡單。高超CP值首選，滿足日常商業計重所有基本需求。", "商品圖片": "images/LMPS.gif", "分類": "計價"   },
+            { "商品名稱": "40*50#304白鐵工業台秤","商品介紹": "基礎計價桌秤，功能齊全、操作簡單。高超CP值首選，滿足日常商業計重所有基本需求。", "商品圖片": "images/40X50.gif", "分類": "工業台秤"   },
+            { "商品名稱": "42*52黑鐵工業台秤","商品介紹": "基礎計價桌秤，功能齊全、操作簡單。高超CP值首選，滿足日常商業計重所有基本需求。", "商品圖片": "images/4252.gif", "分類": "工業台秤"   }
+        ];
+
+        let filteredProducts = [];
+        let currentCategory = '全部';
+        let currentPage = 1;
+        const itemsPerPage = 9;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            animateCounter("count1", 5200, "+份");
+            animateCounter("count2", 18500, "+件");
+            animateCounter("count3", 99, "%信賴");
+
+        // 請將下方的網址換成你剛部署的 Apps Script Web App URL
+        const COUNT_API_URL = 'https://script.google.com/macros/s/AKfycbxBNKydc11ir8x1U_Wg7t28mp2LFFHdD0g8bvpsw3axiUKK2ZlNbtciH4Cr-VtfFLXH5A/exec';
+
+        fetch(COUNT_API_URL)
+        .then(response => response.json())
+        .then(data => {
+            if (data && typeof data.views === 'number') {
+            animateCounter("count-views", data.views, " 次");
+            } else {
+            document.getElementById("count-views").innerText = "載入失敗";
+            }
+        })
+        .catch(() => {
+            document.getElementById("count-views").innerText = "0 次";
+        });
+
+            filterAndRender();
+        });
+
+        function changeCategory(category) {
+            currentCategory = category;
+            currentPage = 1;
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                // 改用 data-category 屬性比對，避免文字內容變動影響
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            filterAndRender();
+        }
+
+        function filterAndRender() {
+            filteredProducts = allProducts.filter(item => {
+                if (currentCategory === '全部') {
+                    return true; // 顯示全部
+                } else {
+                    // 只顯示「分類」欄位與 currentCategory 完全相同的商品
+                    return item.分類 === currentCategory;
+                }
+            });
+            renderProductGrid();
+            renderPagination();
+        }
+
+        function renderProductGrid() {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+            if (filteredProducts.length === 0) {
+                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: #718096; padding: 40px 0;">暫無此分類商品。</div>`;
+                return;
+            }
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageItems = filteredProducts.slice(startIndex, endIndex);
+
+            pageItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-img-wrapper">
+                        <img src="${item.商品圖片}" alt="${item.商品名稱}" onerror="this.src='https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=400&q=80'">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">${item.商品名稱}</h3>
+                        <p class="product-desc">${item.商品介紹}</p>
+                        <div class="product-action">
+                            <button class="detail-btn" onclick="alert('商品 [${item.商品名稱}] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！')">
+                                ✉ 詢問商品報價
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function renderPagination() {
+            const container = document.getElementById('paginationContainer');
+            container.innerHTML = '';
+            const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+            if (totalPages <= 1) {
+                container.style.display = 'none';
+                return;
+            }
+            container.style.display = 'flex';
+
+            const prevBtn = document.createElement('div');
+            prevBtn.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+            prevBtn.innerHTML = '❮';
+            if (currentPage > 1) { prevBtn.onclick = () => { currentPage--; filterAndRender(); }; }
+            container.appendChild(prevBtn);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('div');
+                pageBtn.className = `page-item ${currentPage === i ? 'active' : ''}`;
+                pageBtn.innerText = i;
+                pageBtn.onclick = () => { currentPage = i; filterAndRender(); };
+                container.appendChild(pageBtn);
+            }
+
+            const nextBtn = document.createElement('div');
+            nextBtn.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+            nextBtn.innerHTML = '❯';
+            if (currentPage < totalPages) { nextBtn.onclick = () => { currentPage++; filterAndRender(); }; }
+            container.appendChild(nextBtn);
+        }
+
+        // ========== 🆕 Lightbox 燈箱功能 ==========
+        function openLightbox(imgSrc, caption) {
+            const overlay = document.getElementById('lightboxOverlay');
+            const image = document.getElementById('lightboxImage');
+            const captionEl = document.getElementById('lightboxCaption');
+            image.src = imgSrc;
+            captionEl.textContent = caption || '';
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // 防止背景滾動
+        }
+
+        function closeLightbox() {
+            const overlay = document.getElementById('lightboxOverlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = ''; // 恢復滾動
+            // 延遲清除圖片，避免關閉動畫時閃爍
+            setTimeout(() => {
+                document.getElementById('lightboxImage').src = '';
+                document.getElementById('lightboxCaption').textContent = '';
+            }, 300);
+        }
+
+        // 鍵盤 ESC 關閉燈箱
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // ========== 驗證碼與表單提交 ==========
+        let captchaAnswer = 0;
+
+        // 生成隨機加法題目
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1; // 1~10
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            captchaAnswer = num1 + num2;
+            document.getElementById('captchaQuestion').innerText = `${num1} + ${num2}`;
+            document.getElementById('captchaInput').value = '';
+            document.getElementById('captchaHint').innerText = '';
+            document.getElementById('formMessage').innerText = '';
+            document.getElementById('formMessage').className = 'form-message';
+        }
+
+        // 監聽表單提交
+        document.addEventListener('DOMContentLoaded', function() {
+            generateCaptcha(); // 初始生成
+
+            document.getElementById('refreshCaptcha').addEventListener('click', generateCaptcha);
+
+            document.getElementById('contactForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                // 基本驗證
+                const email = document.getElementById('senderEmail').value.trim();
+                const captchaVal = parseInt(document.getElementById('captchaInput').value.trim(), 10);
+                const formMsg = document.getElementById('formMessage');
+                const captchaHint = document.getElementById('captchaHint');
+
+                formMsg.innerText = '';
+                captchaHint.innerText = '';
+
+                if (!email) {
+                    formMsg.innerText = '請輸入您的 Email。';
+                    formMsg.className = 'form-message error';
+                    return;
+                }
+
+                if (isNaN(captchaVal)) {
+                    captchaHint.innerText = '請輸入驗證碼數字。';
+                    return;
+                }
+
+                if (captchaVal !== captchaAnswer) {
+                    captchaHint.innerText = '驗證碼錯誤，請再試一次。';
+                    generateCaptcha(); // 刷新題目
+                    return;
+                }
+
+                // 準備資料
+                const name = document.getElementById('senderName').value.trim() || '未提供';
+                const message = document.getElementById('message').value.trim() || '無';
+
+                // 鎖定按鈕，避免重複送出
+                const submitBtn = document.getElementById('submitBtn');
+                submitBtn.disabled = true;
+                submitBtn.innerText = '傳送中...';
+
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbxBNKydc11ir8x1U_Wg7t28mp2LFFHdD0g8bvpsw3axiUKK2ZlNbtciH4Cr-VtfFLXH5A/exec';
+
+                try {
+                    const response = await fetch(scriptURL, {
+                        method: 'POST',
+                        mode: 'cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name, email, message })
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        formMsg.innerText = '✅ 訊息已成功送出，我們會盡快回覆您！';
+                        formMsg.className = 'form-message success';
+                        document.getElementById('contactForm').reset();
+                        generateCaptcha();
+                    } else {
+                        throw new Error(result.error || '傳送失敗');
+                    }
+                } catch (error) {
+                    formMsg.innerText = '❌ 傳送失敗，請稍後再試或直接來電。';
+                    formMsg.className = 'form-message error';
+                    console.error('傳送錯誤:', error);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = '✉️ 送出訊息';
+                }
+            });
+        });
+
+
+    </script>
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
