@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0099)https://n-pejiaioeygqusury7j3qqiwlqyl7n3ttaojjwmq-0lu-script.googleusercontent.com/userCodeAppPanel -->
- <!-- V1.2 260725 -->
+ <!-- V1.3 260725 -->
 <html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./jsapi"></script><script>window.parent.maeExportApis_();</script>
 
 
@@ -1514,11 +1514,14 @@
                 const scriptURL = 'https://script.google.com/macros/s/AKfycbxBNKydc11ir8x1U_Wg7t28mp2LFFHdD0g8bvpsw3axiUKK2ZlNbtciH4Cr-VtfFLXH5A/exec';
 
                 try {
-                    const response = await fetch(scriptURL, {
-                        method: 'POST',
-                        mode: 'cors',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ name, email, message })
+                        const formData = new URLSearchParams();
+                        formData.append("name", name);
+                        formData.append("email", email);
+                        formData.append("message", message);
+
+                        const response = await fetch(scriptURL, {
+                            method: "POST",
+                            body: formData
                     });
 
                     const result = await response.json();
