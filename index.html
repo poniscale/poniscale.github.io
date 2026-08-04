@@ -879,14 +879,51 @@
             font-weight: bold;
         }
 
+        /* ===== 修改後的 footer（支援左文右圖排版）===== */
         footer {
             background-color: #2d3748;
             color: #a0aec0;
-            text-align: center;
-            padding: 20px;
+            padding: 30px 5%;               /* 稍微增加內距，左右留白更多 */
             font-size: 14px;
             margin-top: auto;
             border-top: 3px solid #ecc94b;
+
+            /* ✅ 新增這四行，讓 footer 變成左右排列 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;                /* 畫面太小時自動換行，手機版也適用 */
+        }
+
+        /* 左側文字區塊 */
+        .footer-left {
+            text-align: left;               /* 文字靠左（原本是置中，現在左對齊） */
+            max-width: 70%;                 /* 避免太寬擠到圖片，可依需求調整 */
+            line-height: 1.8;
+        }
+
+        /* 右側圖片 */
+        .footer-right-img {
+            max-width: 120px;               /* 限制圖片最大寬度 */
+            height: auto;
+            flex-shrink: 0;                 /* 防止圖片被擠壓變形 */
+        }
+
+        /* --- 手機版調整：窄螢幕時圖片移到下方並置中 --- */
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;     /* 改為上下排列 */
+                align-items: center;
+                text-align: center;
+            }
+            .footer-left {
+                text-align: center;
+                max-width: 100%;
+            }
+            .footer-right-img {
+                margin-top: 20px;
+                max-width: 90px;            /* 手機上圖片稍微小一點 */
+            }
         }
 
         @media (max-width: 1024px) {
@@ -1192,7 +1229,7 @@
                         <h3 class="product-name">VMP-30K</h3>
                         <p class="product-desc">超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。</p>
                         <div class="product-action">
-                            <button class="detail-btn" onclick="alert(&#39;商品 [VMP-30K] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！&#39;)">
+                            <button class="detail-btn" onclick="window.open('https://line.me/R/ti/p/@275qompx','_blank')">
                                 ✉ 詢問商品報價
                             </button>
                         </div>
@@ -1461,14 +1498,18 @@
     </div>
 
     <footer>
-        <p><strong>金來磅電子有限公司</strong></p>
-        <p>新北市三重區中正北路530巷3號2樓</p>
-        <p>📞 0930-133-697 | 0972-637-639</p>
-        <p>LINE官方賬號：@275qompx</p>
-        <p>官網：poniscale.com</p>
-        <p>✉️ poniscale@126.com | poniscale@yahoo.com.tw</p>
-        <br>
-        <p>© 2026 金來磅電子有限公司 版權所有 | 精準量測 · 信賴首選</p>
+        <div class="footer-left">
+            <p><strong>金來磅電子有限公司</strong></p>
+            <p>新北市三重區中正北路530巷3號2樓</p>
+            <p>📞 0930-133-697 | 0972-637-639</p>
+            <p>LINE官方賬號：<a href="https://line.me/R/ti/p/@275qompx">@275qompx</a></p>
+            <p>官網：poniscale.com</p>
+            <p>✉️ poniscale@126.com | poniscale@yahoo.com.tw</p>
+            <br>
+            <p>© 2026 金來磅電子有限公司 版權所有 | 精準量測 · 信賴首選</p>
+        </div>
+
+        <img src="images/line.png" alt="公司Line" class="footer-right-img">
     </footer>
 
     <script>
@@ -1616,7 +1657,7 @@
                         <h3 class="product-name">${item.商品名稱}</h3>
                         <p class="product-desc">${item.商品介紹}</p>
                         <div class="product-action">
-                            <button class="detail-btn" onclick="alert('商品 [${item.商品名稱}] 報價與專屬優惠，歡迎致電 0930-133-697 由專人為您服務！')">
+                            <button class="detail-btn" onclick="window.open('https://line.me/R/ti/p/@275qompx','_blank')">
                                 ✉ 詢問商品報價
                             </button>
                         </div>
