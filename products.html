@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>商品總覽 - 金來磅電子有限公司｜計價秤、工業秤、桌秤系列</title>
+    <meta name="description" content="金來磅提供全系列計價電子秤、工業台秤、工業桌秤，包括超大字體、防蟑、高精度機種，滿足菜市場、工廠、倉儲等各種秤重需求。">
+    <meta name="keywords" content="計價秤,工業台秤,工業桌秤,電子秤總覽,金來磅,防蟑秤,高精度秤重">
+
+    <meta name="author" content="金來磅電子有限公司">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="googlebot" content="index,follow,max-image-preview:large">
+
+    <link rel="canonical" href="https://poniscale.com/products.html">
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="T3bYB0FssMvd5TW1OEyA0JJueVwFnWtomp6tzL8ZpJU" />
+
+    <!-- 網站名稱 -->
+    <meta name="application-name" content="金來磅電子有限公司">
+    <meta name="apple-mobile-web-app-title" content="金來磅電子有限公司">
+    <meta name="theme-color" content="#1A365D">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- 外部樣式表 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 本頁附加樣式：側邊欄、回到頂部按鈕 -->
+    <style>
+        /* 讓 main 有足夠的左側空間 */
+        main {
+            position: relative;
+        }
+
+        /* 左側固定分類導航 */
+        .side-nav {
+            position: fixed;
+            left: 20px;
+            top: 160px; /* 調整至 header+跑馬燈下方 */
+            width: 140px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            z-index: 999;
+            transition: top 0.3s;
+        }
+
+        .side-nav a {
+            display: block;
+            color: #1a365d;
+            text-decoration: none;
+            padding: 10px 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .side-nav a:hover,
+        .side-nav a.active {
+            background: #1a365d;
+            color: #fff;
+        }
+
+        /* 手機版隱藏側邊欄 */
+        @media (max-width: 768px) {
+            .side-nav {
+                display: none;
+            }
+        }
+
+        /* 回到頂部按鈕 */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 46px;
+            height: 46px;
+            background: #1a365d;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+            z-index: 1000;
+        }
+
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #backToTop:hover {
+            background: #ecc94b;
+            color: #1a365d;
+        }
+
+        /* 讓主要內容不與側邊欄重疊 */
+        @media (min-width: 769px) {
+            main {
+                padding-left: 200px; /* 為側邊欄留出空間 */
+            }
+        }
+    </style>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="金來磅電子有限公司">
+    <meta property="og:title" content="商品總覽 - 金來磅電子有限公司">
+    <meta property="og:description" content="全系列電子秤、工業秤、計價秤，滿足各種商業與工業秤重需求。">
+    <meta property="og:url" content="https://poniscale.com/products.html">
+    <meta property="og:image" content="https://poniscale.com/favicon.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="商品總覽 - 金來磅電子有限公司">
+    <meta name="twitter:description" content="計價秤、工業秤、桌秤系列，台灣製造，精準耐用。">
+    <meta name="twitter:image" content="https://poniscale.com/favicon.png">
+
+    <!-- Organization -->
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Organization",
+        "name":"金來磅電子有限公司",
+        "alternateName":"PONI Scale",
+        "url":"https://poniscale.com/",
+        "logo":"https://poniscale.com/favicon.png",
+        "email":"poniscale@yahoo.com.tw",
+        "telephone":"+886930133697",
+        "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"中正北路530巷3號2樓",
+            "addressLocality":"新北市",
+            "addressRegion":"新北市",
+            "postalCode":"241",
+            "addressCountry":"TW"
+        },
+        "sameAs":["https://poniscale.com/"]
+    }
+    </script>
+
+    <!-- Website -->
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "name":"金來磅電子有限公司",
+        "alternateName":"PONI Scale",
+        "url":"https://poniscale.com/",
+        "inLanguage":"zh-TW"
+    }
+    </script>
+
+    <!-- LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Store",
+        "name":"金來磅電子有限公司",
+        "image":"https://poniscale.com/favicon.png",
+        "telephone":"+886930133697",
+        "email":"poniscale@yahoo.com.tw",
+        "url":"https://poniscale.com/",
+        "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"中正北路530巷3號2樓",
+            "addressLocality":"新北市",
+            "addressCountry":"TW"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>
+                <img src="images/logo.svg" alt="金來磅電子有限公司 Logo" style="height: 1.2em; vertical-align: middle; margin-right: 6px;">
+                金來磅電子秤
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">公司簡介</a></li>
+                <li><a href="products.html">商品頁面</a></li>
+                <li><a href="blog.html">電子秤百科中心</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            🔥 【2026 專業頭家首選】金來磅新一代智能計價秤全面上線！ 📌 即日起凡致電預約親臨現場看秤，即享客製化免校正專業保固！ 📞 諮詢服務專線：0930-133-697，LINE官方賬號：@275qompx
+        </div>
+    </div>
+
+    <!-- 左側固定分類導航 -->
+    <nav class="side-nav" id="sideNav">
+        <a href="#pricing">計價秤系列</a>
+        <a href="#industrial-table">工業台秤系列</a>
+        <a href="#industrial-desk">工業桌秤系列</a>
+    </nav>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" title="回到頂部">&#8593;</button>
+
+    <main>
+        <div class="page-header">
+            <h2>計價電子秤與工業電子秤</h2>
+        </div>
+        <p class="product-intro-text">金來磅為全台商家與工廠提供卓越、精準、高耐用度的量測設備，滿足您從計價桌秤到高精密計數的所有專業需求。</p>
+
+        <!-- 桌面端保留頂部分類按鈕（可選） -->
+        <div class="category-container">
+            <a href="#pricing" class="category-btn">計價秤系列</a>
+            <a href="#industrial-table" class="category-btn">工業台秤系列</a>
+            <a href="#industrial-desk" class="category-btn">工業桌秤系列</a>
+        </div>
+
+        <!-- 計價秤系列 -->
+        <h3 id="pricing" style="color:#1a365d; margin-top:40px;">計價秤系列</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="products/product-vmp30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/VMP.gif" alt="VMP-30K 超大字體計價電子秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">VMP-30K</h3>
+                        <p class="product-desc">超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-v530k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/V5.gif" alt="V5-30K 大盤面計價電子秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">V5-30K</h3>
+                        <p class="product-desc">傳統大尺寸盤面款計價秤，大秤盤容納性高，穩定耐用，各行各業頭家愛用經典。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-emp30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/EMP.gif" alt="EMP-30K 智能充電防水計價秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">EMP-30K</h3>
+                        <p class="product-desc">新款智能充電菜市場計價秤，專為高流動攤商設計。強效續航力與防潑水構造，擺攤生財必備。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-ept30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/EPT.gif" alt="EPT-30K 輕薄防蟑計價秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">EPT-30K</h3>
+                        <p class="product-desc">輕薄防蟑款，極簡不佔空間。獨特內部防護結構，能有效阻止昆蟲入侵主機板。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-vpt30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/VPT.png" alt="VPT-3015K 經典防蟑計價秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">VPT-3015K</h3>
+                        <p class="product-desc">經典防蟑合格款，通過國家檢驗標準。防蟑結構全面升級，兼具高精準度與耐操特性。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-lmps30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/LMPS.gif" alt="LMPS-30K 基礎計價桌秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">LMPS-30K</h3>
+                        <p class="product-desc">基礎計價桌秤，功能齊全、操作簡單。高超CP值首選，滿足日常商業計重所有基本需求。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-vlp30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/VLP.gif" alt="VLP-30K 超大字體計價秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">VLP-30K</h3>
+                        <p class="product-desc">超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-vhp30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/VHP.gif" alt="VHP-30K 超大字體計價秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">VHP-30K</h3>
+                        <p class="product-desc">超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-vip30k.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/VIP.gif" alt="VIP-30K 超大字體計價秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">VIP-30K</h3>
+                        <p class="product-desc">超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 工業台秤系列 -->
+        <h3 id="industrial-table" style="color:#1a365d; margin-top:40px;">工業台秤系列</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="products/product-40x50#304.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/40X50.gif" alt="40*50 #304 不鏽鋼工業台秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">40*50 #304 白鐵工業台秤</h3>
+                        <p class="product-desc">專業計重台秤，全304不鏽鋼材質，選配紅字/黑字，精準穩定耐用。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-4252.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/4252.gif" alt="42*52 黑鐵工業台秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">42*52 黑鐵工業台秤</h3>
+                        <p class="product-desc">專業計重台秤，選配紅字/黑字，精準穩定耐用。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 工業桌秤系列 -->
+        <h3 id="industrial-desk" style="color:#1a365d; margin-top:40px;">工業桌秤系列</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="products/product-MW.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/MW.gif" alt="MW-30K 液晶工業計重秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">MW-30K</h3>
+                        <p class="product-desc">液晶工業計重秤，六萬精度，精準穩定。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="products/product-MWR.html">
+                    <div class="product-img-wrapper">
+                        <img src="images/MWR.gif" alt="MWR-30K 紅字工業計重秤">
+                        <span class="product-badge">專業量測</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">MWR-30K</h3>
+                        <p class="product-desc">紅字工業計重秤，三萬精度，精準穩定。</p>
+                    </div>
+                </a>
+                <div class="product-action">
+                    <a href="https://line.me/R/ti/p/@275qompx" class="detail-btn">✉ 詢問商品報價</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p><strong>金來磅電子有限公司</strong></p>
+            <p>新北市三重區中正北路530巷3號2樓</p>
+            <p>📞 0930-133-697 | 0972-637-639</p>
+            <p>LINE官方賬號：<a href="https://line.me/R/ti/p/@275qompx">@275qompx</a></p>
+            <p>官網：poniscale.com</p>
+            <p>✉️ poniscale@126.com | poniscale@yahoo.com.tw</p>
+            <br>
+            <p>© 2026 金來磅電子有限公司 版權所有 | 精準量測 · 信賴首選</p>
+        </div>
+        <img src="images/line.png" alt="公司Line" class="footer-right-img">
+    </footer>
+
+    <!-- 側邊欄與回到頂部按鈕的功能腳本 -->
+    <script>
+        (function() {
+            // 回到頂部按鈕
+            const backBtn = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    backBtn.classList.add('show');
+                } else {
+                    backBtn.classList.remove('show');
+                }
+            });
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 側邊欄連結點擊後平滑滾動（保留默認錨點行為，但加入 smooth）
+            const sideLinks = document.querySelectorAll('.side-nav a');
+            sideLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // 選中當前區域時高亮側邊欄對應連結（可選）
+            // 此處略，若需要可增加 Intersection Observer
+        })();
+    </script>
+
+</body>
+</html>
+
