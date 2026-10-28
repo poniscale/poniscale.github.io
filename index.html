@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
+<!doctype html><html lang="zh-Hant"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,7 +27,7 @@
     <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- 外部樣式表 -->
-    <link rel="stylesheet" href="css/style.css">
+    
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -101,128 +99,10 @@
         }
     }
     </script>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>
-                <img src="images/logo.svg" alt="金來磅電子有限公司 Logo" style="height: 1.2em; vertical-align: middle; margin-right: 6px;">
-                金來磅電子秤
-            </h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="about.html">公司簡介</a></li>
-                <li><a href="products.html">商品頁面</a></li>
-                <li><a href="blog.html">電子秤百科中心</a></li>
-                <li><a href="contact.html">聯絡我們</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="marquee-container">
-        <div class="marquee-content">
-            🔥 【2026 專業頭家首選】金來磅新一代智能計價秤全面上線！ 📌 即日起凡致電預約親臨現場看秤，即享客製化免校正專業保固！ 📞 諮詢服務專線：0930-133-697，LINE官方賬號：@275qompx
-        </div>
-    </div>
-
-    <main>
-        <div class="hero-banner">
-            <div class="carousel-slide" style="background-image: url('https://s319103.github.io/hong/images/319103.2.jpg');">
-                <div class="hero-overlay"></div>
-                <div class="hero-text">
-                    <h2>專注極致精準 守護商家商譽</h2>
-                    <p>我們深知一磅值千金的道理，不論是商業計價還是工業計數，金來磅提供全方位高穩定度的量測解決方案。</p>
-                </div>
-            </div>
-            <div class="carousel-slide active" style="background-image: url('https://s319103.github.io/hong/images/319103.3.jpg');">
-                <div class="hero-overlay"></div>
-                <div class="hero-text">
-                    <h2>全台專人售後 一通電話服務到家</h2>
-                    <p>業界領先的售後維修保固，不讓工具問題耽誤您賺錢的腳步。歡迎致電諮詢：0930-133-697。</p>
-                </div>
-            </div>
-        </div>
-        <section class="counter-section">
-            <h3>信賴與專業的品質承諾</h3>
-            <div class="counter-grid">
-                <div class="counter-box"><div class="counter-number" id="count1">5,200+份</div><div class="counter-label">頭家認證物美價廉</div></div>
-                <div class="counter-box"><div class="counter-number" id="count2">18,500+件</div><div class="counter-label">嚴選高CP值品質好</div></div>
-                <div class="counter-box"><div class="counter-number" id="count3">99%信賴</div><div class="counter-label">誠信經營售後沒煩惱</div></div>
-                <div class="counter-box views-box"><div class="counter-number views-num" id="count-views">0 次</div><div class="counter-label">👁️ 網頁總瀏覽次數</div></div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-left">
-            <p><strong>金來磅電子有限公司</strong></p>
-            <p>新北市三重區中正北路530巷3號2樓</p>
-            <p>📞 0930-133-697 | 0972-637-639</p>
-            <p>LINE官方賬號：<a href="https://line.me/R/ti/p/@275qompx">@275qompx</a></p>
-            <p>官網：poniscale.com</p>
-            <p>✉️ poniscale@126.com | poniscale@yahoo.com.tw</p>
-            <br>
-            <p>© 2026 金來磅電子有限公司 版權所有 | 精準量測 · 信賴首選</p>
-        </div>
-        <img src="images/line.png" alt="公司Line" class="footer-right-img">
-    </footer>
-
-    <!-- 首頁專用腳本：輪播、計數器動畫、瀏覽計數 -->
-    <script>
-        // 輪播
-        const slides = document.querySelectorAll('.carousel-slide');
-        let currentSlide = 0;
-        setInterval(() => {
-            if (slides.length > 0) {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }
-        }, 5000);
-
-        // 計數器動畫
-        function animateCounter(id, target, suffix = "") {
-            if (target === 0) {
-                document.getElementById(id).innerText = "0" + suffix;
-                return;
-            }
-            let current = 0;
-            let step = Math.ceil(target / 50);
-            let timer = setInterval(() => {
-                const el = document.getElementById(id);
-                if (!el) { clearInterval(timer); return; }
-                current += step;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                el.innerText = current.toLocaleString() + suffix;
-            }, 30);
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            animateCounter("count1", 5200, "+份");
-            animateCounter("count2", 18500, "+件");
-            animateCounter("count3", 99, "%信賴");
-
-            const COUNT_API_URL = 'https://script.google.com/macros/s/AKfycbxBNKydc11ir8x1U_Wg7t28mp2LFFHdD0g8bvpsw3axiUKK2ZlNbtciH4Cr-VtfFLXH5A/exec';
-
-            fetch(COUNT_API_URL)
-                .then(response => response.json())
-                .then(data => {
-                    if (data && typeof data.views === 'number') {
-                        animateCounter("count-views", data.views, " 次");
-                    } else {
-                        document.getElementById("count-views").innerText = "載入失敗";
-                    }
-                })
-                .catch(() => {
-                    document.getElementById("count-views").innerText = "0 次";
-                });
-        });
-    </script>
-
-</body>
-</html>
+<link rel="stylesheet" href="css/style.css"><script defer src="js/site.js"></script></head><body><a class="skip" href="#main">跳至主要內容</a><div class="topbar"><span>金來磅電子有限公司 · PONI SCALE</span><div class="topbar-phones"><span>服務專線</span><a href="tel:0930133697">0930-133-697 ↗</a><a href="tel:0972637639">0972-637-639 ↗</a></div></div><header class="site-header"><a class="brand" href="index.html"><img class="brand-logo" src="images/logo.svg" alt="金來磅商標" width="47" height="46"><span>金來磅<small>PONI SCALE</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="開啟導覽選單">☰</button><nav id="navigation" aria-label="主要導覽"><a href="index.html" aria-current="page">首頁</a><a href="products.html" >產品型錄</a><a href="about.html" >關於金來磅</a><a href="blog.html" >電子秤百科</a><a class="nav-contact" href="contact.html" >聯絡我們 ↗</a></nav></header><main id="main"><section class="industrial-hero"><div class="industrial-hero-copy"><div class="industry-kicker"><span></span> PONI SCALE / SINCE 1995</div><p class="industrial-overline">金來磅電子有限公司 · 專業衡器製造</p><h1>衡器製造，<br>始於對精準的堅持。</h1><p class="industrial-lead">深耕電子衡器與工業秤重領域三十餘年。<br>從研發設計、設備製造到校正與售後服務，<br>為商業交易與工業製程，提供穩定可靠的量測支援。</p><div class="actions"><a class="button primary" href="#manufacturing">了解製造與檢測實力 <span>↗</span></a><a class="button outline" href="products.html">查看產品型錄 →</a></div><div class="industrial-since"><strong>1995</strong><span>成立至今<br>專注電子衡器與秤重應用</span></div></div><div class="industrial-hero-media"><div class="factory-photo"><img src="images/6.png" alt="金來磅原始公司設備紀錄中的焊錫工作區照片" width="2480" height="3184" fetchpriority="high"></div><div class="factory-caption"><span>MANUFACTURING & ENGINEERING</span><p>廠區作業紀錄 · 取自公司原始資料</p></div><div class="industrial-detail"><span>研發設計</span><span>專業製造</span><span>品質檢測</span><span>售後支援</span></div></div></section><div class="industry-principles"><span><b>01</b><strong>研發與設計</strong><small>電子衡器與數位控制</small></span><span><b>02</b><strong>製造與檢測</strong><small>重視設備、製程與品質</small></span><span><b>03</b><strong>應用與服務</strong><small>規劃、校正及售後支援</small></span></div>
+<section class="section industrial-intro" id="manufacturing"><div><span class="eyebrow">MANUFACTURING CAPABILITY</span><h2>設備是品質的前提。<br>經驗，落實在每一道工序。</h2></div><div><p>金來磅專注於電子衡器、工業秤重系統及自動化控制設備的研發、設計與製造。以量測技術、數位控制與客製化整合，回應不同產業的秤重需求。</p><a class="text-link" href="about.html">公司歷程與製造背景 →</a></div></section>
+<section class="section manufacturing-evidence"><div class="evidence-record"><a href="about.html" aria-label="查看公司設備與檢測紀錄"><img src="images/6.png" alt="金來磅公司原始製造設備與檢測紀錄：工作區、性能試驗、校準及電氣測試設備" width="2480" height="3184" loading="lazy"></a><p>公司原始設備與檢測紀錄</p></div><div class="evidence-content"><span class="eyebrow">QUALITY & TESTING</span><h2>專業的背後，<br>有看得見的檢測紀錄。</h2><p>公司原始資料記錄了製造、校準與多項測試設備，讓品質承諾有具體依據。</p><div class="testing-list"><div><span>01</span><section><h3>環境與性能試驗</h3><p>高低溫性能試驗、高溫老化設備紀錄。</p></section></div><div><span>02</span><section><h3>承載與操作耐久性</h3><p>承載測試與按鍵耐久性測試紀錄。</p></section></div><div><span>03</span><section><h3>電氣安全與量測</h3><p>絕緣電阻、耐壓、漏電及精密電壓電流測試設備。</p></section></div><div><span>04</span><section><h3>校準與精度確認</h3><p>四角校準設備與檢定砝碼紀錄。</p></section></div></div><a class="text-link" href="about.html">查看完整公司資料 →</a></div></section>
+<section class="heritage-metrics" aria-labelledby="metrics-title"><div class="metrics-heading"><div><span class="eyebrow">TRUST BUILT OVER TIME</span><h2 id="metrics-title">信賴與專業的品質承諾</h2></div><p>一磅值千金，誠信傳百年。</p></div><div class="metrics-grid"><div><strong>5,200<span>+份</span></strong><p>頭家認證物美價廉</p></div><div><strong>18,500<span>+件</span></strong><p>嚴選高CP值品質好</p></div><div><strong>99<span>%信賴</span></strong><p>誠信經營售後沒煩惱</p></div><div class="visitor-metric"><strong id="count-views" aria-live="polite">—</strong><p>網站總瀏覽次數</p></div></div></section>
+<section class="section industrial-range"><div class="section-heading"><div><span class="eyebrow">PRODUCT RANGE</span><h2>商用與工業秤重設備</h2></div><a class="text-link" href="products.html">完整產品型錄 →</a></div><p class="section-lead">從計價、計重到工業台秤，依應用情境與規格選擇合適設備。</p><div class="category-grid"><a class="category-card" href="products.html?category=%E8%A8%88%E5%83%B9%E7%A7%A4"><small>01 / RETAIL</small><h3>計價秤系列 <span>↗</span></h3><p>市場、蔬果與零售交易的日常幫手。</p><img src="images/V5.webp" alt="計價秤" loading="lazy" width="480" height="320"></a><a class="category-card" href="products.html?category=%E5%B7%A5%E6%A5%AD%E5%8F%B0%E7%A7%A4"><small>02 / PLATFORM</small><h3>工業台秤系列 <span>↗</span></h3><p>大秤盤，滿足工廠與倉儲秤重需求。</p><img src="images/40X50.webp" alt="工業台秤" loading="lazy" width="480" height="320"></a><a class="category-card" href="products.html?category=%E5%B7%A5%E6%A5%AD%E6%A1%8C%E7%A7%A4"><small>03 / BENCH</small><h3>工業桌秤系列 <span>↗</span></h3><p>讓工作檯上的每一次量測更順手。</p><img src="images/MW.webp" alt="工業桌秤" loading="lazy" width="480" height="320"></a></div></section><section class="section industrial-products"><div class="section-heading"><div><span class="eyebrow">EQUIPMENT OVERVIEW</span><h2>產品與應用</h2></div><a class="text-link" href="products.html">查看設備規格 →</a></div><div class="product-grid"><article class="product-card" data-category="計價秤" data-search="VMP-30K 超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。"><a class="product-photo" href="products/product-vmp30k.html"><span class="tag">計價秤</span><img loading="lazy" width="640" height="480" src="images/VMP.webp" alt="VMP-30K 超大字體計價電子秤"></a><div class="product-copy"><a href="products/product-vmp30k.html"><h3>VMP-30K <span>↗</span></h3></a><p>超大字體款計價秤，讀數清晰不費力，適合光線昏暗或需快速辨識之作業環境。</p><div class="product-bottom"><small>商用與工業量測設備</small><a href="contact.html" aria-label="聯絡我們詢問 VMP-30K">技術諮詢 →</a></div></div></article><article class="product-card" data-category="計價秤" data-search="EMP-30K 新款智能充電菜市場計價秤，專為高流動攤商設計。強效續航力與防潑水構造，擺攤生財必備。"><a class="product-photo" href="products/product-emp30k.html"><span class="tag">計價秤</span><img loading="lazy" width="640" height="480" src="images/EMP.webp" alt="EMP-30K 智能充電防水計價秤"></a><div class="product-copy"><a href="products/product-emp30k.html"><h3>EMP-30K <span>↗</span></h3></a><p>新款智能充電菜市場計價秤，專為高流動攤商設計。強效續航力與防潑水構造，擺攤生財必備。</p><div class="product-bottom"><small>商用與工業量測設備</small><a href="contact.html" aria-label="聯絡我們詢問 EMP-30K">技術諮詢 →</a></div></div></article><article class="product-card" data-category="工業台秤" data-search="40*50 #304 白鐵工業台秤 專業計重台秤，全304不鏽鋼材質，選配紅字/黑字，精準穩定耐用。"><a class="product-photo" href="products/product-40X50-304.html"><span class="tag">工業台秤</span><img loading="lazy" width="640" height="480" src="images/40X50.webp" alt="40*50 #304 不鏽鋼工業台秤"></a><div class="product-copy"><a href="products/product-40X50-304.html"><h3>40*50 #304 白鐵工業台秤 <span>↗</span></h3></a><p>專業計重台秤，全304不鏽鋼材質，選配紅字/黑字，精準穩定耐用。</p><div class="product-bottom"><small>商用與工業量測設備</small><a href="contact.html" aria-label="聯絡我們詢問 40*50 #304 白鐵工業台秤">技術諮詢 →</a></div></div></article></div></section>
+<section class="section industry-process"><div class="section-heading"><div><span class="eyebrow">TECHNICAL SUPPORT</span><h2>從需求規劃，到長期穩定運作。</h2></div></div><div class="process-grid"><div><b>01</b><h3>應用需求確認</h3><p>了解秤量、精度、環境與操作方式。</p></div><div><b>02</b><h3>設備與方案規劃</h3><p>依實際用途討論合適機種及整合需求。</p></div><div><b>03</b><h3>安裝與校正服務</h3><p>提供設備建置、使用與校正相關協助。</p></div><div><b>04</b><h3>維護與售後支援</h3><p>持續提供保養、檢查與維修諮詢。</p></div></div></section>
+<section class="section"><div class="section-heading"><div><span class="eyebrow">TECHNICAL JOURNAL</span><h2>量測知識與設備維護</h2></div><a class="text-link" href="blog.html">電子秤百科 →</a></div><a class="journal-row" href="articles/how-to-choose-pricing-scale.html"><span class="journal-num">01</span><img class="journal-thumbnail" src="images/blog-placeholder.jpg" alt="電子秤選購與商業經營知識" width="320" height="210" loading="lazy"><div><small> 商業經營 · 智慧升級</small><h3>如何挑選一台會「幫你賺錢」的生鮮計價秤？</h3><p>新款智能充電菜市場秤如何幫您大幅縮短結帳時間，精確掌控利潤，防蟑防潑水設計更是延長生財工具壽命的關鍵！</p></div><span class="arrow">↗</span></a><a class="journal-row" href="articles/scale-calibration-guide.html"><span class="journal-num">02</span><img class="journal-thumbnail" src="images/blog-placeholder.jpg" alt="電子秤選購與商業經營知識" width="320" height="210" loading="lazy"><div><small> 電子秤知識 · 校正指南</small><h3>電子秤需要校正嗎？多久校正一次最安全？</h3><p>電子秤買回來就不用管了嗎？帶您了解校正的重要性、建議週期與日常保養技巧，確保每一次交易都精準無誤。</p></div><span class="arrow">↗</span></a></section></main><section class="contact-band"><div><span class="eyebrow">ENGINEERING & SERVICE</span><h2>從量測需求，<br>到長期穩定的設備運作。</h2></div><div><p>與我們討論您的秤重應用、設備規劃與維護需求。<br>金來磅提供專業技術與售後服務諮詢。</p><div class="actions"><a class="button primary phone-contact" href="tel:0930133697" aria-label="撥打服務專線 0930-133-697">0930-133-697 <span>↗</span></a><a class="button primary phone-contact" href="tel:0972637639" aria-label="撥打服務專線 0972-637-639">0972-637-639 <span>↗</span></a><a class="button outline" href="https://line.me/R/ti/p/@275qompx">LINE 諮詢 <span>↗</span></a></div></div></section><footer><div class="footer-top"><a class="brand" href="index.html"><img class="brand-logo" src="images/logo.svg" alt="金來磅商標" width="47" height="46"><span>金來磅<small>PONI SCALE</small></span></a><p>一磅值千金，誠信在每一次量測之間。</p></div><div class="footer-grid"><div><small>服務專線</small><a href="tel:0930133697">0930-133-697</a><a href="tel:0972637639">0972-637-639</a></div><div><small>與我們聯絡</small><a href="mailto:poniscale@yahoo.com.tw">poniscale@yahoo.com.tw</a><a href="https://line.me/R/ti/p/@275qompx">LINE @275qompx ↗</a></div><div><small>公司地址</small><p>新北市三重區中正北路530巷3號2樓</p><a href="https://www.google.com/maps?q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%B8%AD%E6%AD%A3%E5%8C%97%E8%B7%AF530%E5%B7%B73%E8%99%9F2%E6%A8%93" target="_blank" rel="noopener noreferrer">在 Google 地圖查看 ↗</a></div><div class="footer-line"><small>掃碼加入 LINE</small><a href="https://line.me/R/ti/p/@275qompx" aria-label="加入金來磅 LINE 官方帳號"><img src="images/line.png" alt="金來磅 LINE 官方帳號二維碼" width="144" height="144" loading="lazy"></a><a href="https://line.me/R/ti/p/@275qompx">@275qompx ↗</a></div></div><div class="footer-map"><iframe title="金來磅公司地址 Google 地圖" src="https://www.google.com/maps?q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%B8%AD%E6%AD%A3%E5%8C%97%E8%B7%AF530%E5%B7%B73%E8%99%9F2%E6%A8%93&output=embed" width="1200" height="280" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a class="map-fallback" href="https://www.google.com/maps?q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%B8%AD%E6%AD%A3%E5%8C%97%E8%B7%AF530%E5%B7%B73%E8%99%9F2%E6%A8%93" target="_blank" rel="noopener noreferrer">開啟 Google 地圖・新北市三重區中正北路530巷3號2樓 ↗</a></div><div class="footer-bottom"><span>© 2026 金來磅電子有限公司</span><span>精準量測 · 信賴首選</span></div></footer><button class="back-to-top" type="button" aria-label="回到頁面頂端" title="回到頂端" hidden><span aria-hidden="true">↑</span><span>置頂</span></button><div class="mobile-contact"><a class="mobile-phone" href="tel:0930133697">0930-133-697 ↗</a><a class="mobile-phone" href="tel:0972637639">0972-637-639 ↗</a><a href="https://line.me/R/ti/p/@275qompx">LINE 諮詢 ↗</a></div><aside class="poni-assistant" aria-label="金來磅快捷助手"><section class="assistant-panel" id="assistant-panel" aria-labelledby="assistant-title" hidden><header class="assistant-heading"><div><small>PONI SCALE · 快捷服務</small><h2 id="assistant-title">需要設備服務嗎？</h2></div><button class="assistant-close" type="button" aria-label="關閉快捷選單">×</button></header><p class="assistant-intro">設備資訊、技術諮詢與服務聯絡，快速找到。</p><nav class="assistant-shortcuts" aria-label="快捷服務"><a class="assistant-phone" href="tel:0930133697"><span class="shortcut-icon" aria-hidden="true">☎</span><strong>0930-133-697</strong><small>點擊直接撥打</small></a><a class="assistant-phone" href="tel:0972637639"><span class="shortcut-icon" aria-hidden="true">☎</span><strong>0972-637-639</strong><small>點擊直接撥打</small></a><a class="shortcut-line" href="https://line.me/R/ti/p/@275qompx" target="_blank" rel="noopener noreferrer"><span class="shortcut-icon line-icon" aria-hidden="true">LINE</span><strong>加入 LINE</strong><small>直接聊聊需求 ↗</small></a><a href="products.html"><span class="shortcut-icon" aria-hidden="true">▦</span><strong>查看商品</strong><small>尋找合適的電子秤</small></a><a href="contact.html"><span class="shortcut-icon" aria-hidden="true">✉</span><strong>聯絡我們</strong><small>留言與聯絡資訊</small></a><a href="https://www.google.com/maps?q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%B8%AD%E6%AD%A3%E5%8C%97%E8%B7%AF530%E5%B7%B73%E8%99%9F2%E6%A8%93" target="_blank" rel="noopener noreferrer"><span class="shortcut-icon" aria-hidden="true">⌖</span><strong>公司地圖</strong><small>在 Google 地圖查看 ↗</small></a></nav><div class="assistant-note">商品規格與報價，歡迎電話或 LINE 洽詢。</div></section><button class="assistant-launcher" type="button" aria-expanded="false" aria-controls="assistant-panel" aria-label="開啟金來磅小助手快捷選單"><span class="assistant-greeting">需要幫忙嗎？點我 ↗</span><img class="assistant-character" src="images/poni-assistant.png" alt="" width="144" height="180"><span class="assistant-name">金來磅小助手 <span aria-hidden="true">＋</span></span></button></aside><script defer src="js/home-metrics.js"></script></body></html>
